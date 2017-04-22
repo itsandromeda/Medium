@@ -232,7 +232,7 @@ header img {
 .blogger-info .round-green-border {
     position: relative;
     top: -1px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', serif;
     font-size: 12px;
     padding: 1.6px 9.5px;
 }
@@ -245,4 +245,41 @@ header img {
 .about-date {
     display: inline-block;
     margin-top: 4px;
+}
+
+
+/*
+  ========================================
+  Article Content
+  ========================================
+*/
+
+.article-wrapper {
+    box-sizing: border-box;
+    width: 740px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+article h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #333;
+    line-height: 40px;
+    width: 610px;
+    margin-top: 25px;
+}
+
+article p {
+    font-family: 'Raleway', serif;
+    font-size: 19px;
+    color: #595959;
+    line-height: 32px;
+    width: 655px;
+    margin-top: -20px;
+}
+
+article p:last-child {
+    margin-top: 35px;
 }

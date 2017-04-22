@@ -16,8 +16,9 @@ var mainContainer = document.createElement("div"),
 
     navRight = document.createElement("div"),
     userAvatar = document.createElement("img"),
-    /*Header*/
+
     article = document.createElement("article"),
+    /*Header*/
     header = document.createElement("header"),
     bloggerImg = document.createElement("img"),
     headerDiv = document.createElement("div"),
@@ -32,7 +33,15 @@ var mainContainer = document.createElement("div"),
     aboutBlogger = document.createTextNode("Teaching Assistant at Laboratoria. Trabajando para ver a más mujeres en el mundo de la programación."),
     detailsDiv = document.createElement("div"),
     detailsSpan = document.createElement("span"),
-    date = document.createTextNode("Mar 21 · 6 min read");
+    date = document.createTextNode("Mar 21 · 6 min read"),
+    /*Article*/
+    articleDiv = document.createElement("div"),
+    articleTitle = document.createElement("h1"),
+    articleTitleNode = document.createTextNode("Hazlo con estilo : Tipografías, iconos y sprite"),
+    articleP = document.createElement("p"),
+    articleContent = document.createTextNode("Te imaginas el mundo sin tipos de letra, tamaños, colores, o sin iconos , nada, nada sería iguaaaaaal!!!! Pero gracias a muchos desarrolladores y diseñadores, hoy contamos con una inimaginable gama de fuentes para nuestro desarrollos web, pero la pregunta que nos hacemos es, ¿existen reglas, hay una mejor forma de hacerlo, no sé que tipografía usar? Tengo muchas preguntas y pocas respuestas!!"),
+    articlePB = document.createElement("p"),
+    articleContentB = document.createTextNode("Vamos paso a paso…");
 /*Navigation bar*/
 mainContainer.classList.add("wrapper");
 mainContainer.appendChild(nav);
@@ -100,6 +109,17 @@ detailsDiv.appendChild(aboutSpanDate);
 aboutDiv.appendChild(detailsDiv);
 
 header.appendChild(headerDiv);
+articleTitle.appendChild(articleTitleNode);
+
+articleDiv.classList.add("article-wrapper");
+articleDiv.appendChild(articleTitle);
+article.appendChild(articleDiv);
+
+articleP.appendChild(articleContent);
+articleDiv.appendChild(articleP);
+
+articlePB.appendChild(articleContentB);
+articleDiv.appendChild(articlePB);
 
 document.body.appendChild(mainContainer);
 
