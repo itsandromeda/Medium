@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+  ========================================
+  Navigation bar
+  ========================================
+*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.inner {
+    position: relative;
+    height: 100%;
+    width: 1010px;
+    margin: auto;
+}
+
+button {
+    outline: none;
+}
+
+.paddingleft20 {
+    padding-left: 20px;
+}
+
+.paddingright20 {
+    padding-right: 20px;
+}
+
+
+/*Navigation left*/
+
+.float-left {
+    float: left;
+    height: 100%;
+    width: 380px;
+}
+
+.medium-link {
+    position: absolute;
+    top: 19px;
+    left: 6px;
+    width: 54px;
+    height: 28px;
+    border-right: 1px solid #d9d9d9;
+}
+
+.logo {
+    background-image: url(../images/medium-logo-b-&-w.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 17.5px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.float-left a:nth-child(2) {
+    margin-left: 61px;
+    display: inline-block;
+    height: 36px;
+    margin-top: 15px;
+    margin-right: 18px;
+}
+
+#following-dd-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    top: -14px;
+    width: 92px;
+    height: 19px;
+    margin-right: 18px;
+    padding: 2px 28px 4px 10px;
+}
+
+.fa-chevron-down {
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+.round-plain-green {
+    border-radius: 30px;
+    background-color: #02b875;
+    border: none;
+    cursor: pointer;
+}
+
+.paddingright15 {
+    padding-right: 15px;
+}
+
+.nav-left-i {
+    color: #8f8f8f;
+    position: relative;
+    top: -10px;
+}
+
+.float-left .fa-twitter,
+.float-left .fa-instagram,
+.float-left .fa-facebook {
+    font-size: 22px;
+}
+
+.float-left .fa-twitter:hover,
+.float-left .fa-instagram:hover,
+.float-left .fa-facebook:hover {
+    color: #333;
+}
+
+
+/*Navigation right*/
+
+.float-right {
+    float: right;
+    height: 100%;
+    width: 138px;
+}
+
+.nav-right-i {
+    color: #8f8f8f;
+    position: relative;
+    top: 25px;
+}
+
+.paddingright22 {
+    padding-right: 22px;
+}
+
+.float-right .fa-search,
+.float-right .fa-bell-o {
+    position: relative;
+    top: 8px;
+    font-size: 18px;
+}
+
+.float-right .fa-search:hover,
+.float-right .fa-bell-o:hover {
+    color: #333;
+}
+
+.float-right img {
+    border-radius: 50%;
+    position: relative;
+    top: 17px;
+    left: 4px;
+    cursor: pointer;
+}
