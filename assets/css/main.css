@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.wrapper {
+    height: 602px;
+}
+
 
 /*
   ========================================
@@ -11,16 +15,18 @@ body {
 */
 
 nav {
+    background-color: #fff;
     position: fixed;
     width: 100%;
     height: 65px;
     border-bottom: 1px solid #f3f3f3;
+    z-index: 5;
 }
 
 .inner {
     position: relative;
     height: 100%;
-    width: 1010px;
+    width: 1040px;
     margin: auto;
 }
 
@@ -42,13 +48,13 @@ button {
 .float-left {
     float: left;
     height: 100%;
-    width: 380px;
+    width: 450px;
 }
 
 .medium-link {
     position: absolute;
     top: 19px;
-    left: 6px;
+    left: 29px;
     width: 54px;
     height: 28px;
     border-right: 1px solid #d9d9d9;
@@ -67,9 +73,10 @@ button {
 .float-left a:nth-child(2) {
     margin-left: 61px;
     display: inline-block;
-    height: 36px;
+    height: 37px;
     margin-top: 15px;
     margin-right: 18px;
+    margin-left: 84px;
 }
 
 #following-dd-btn {
@@ -109,6 +116,7 @@ button {
     color: #8f8f8f;
     position: relative;
     top: -10px;
+    left: 1px;
 }
 
 .float-left .fa-twitter,
@@ -136,6 +144,7 @@ button {
     color: #8f8f8f;
     position: relative;
     top: 25px;
+    left: -6px;
 }
 
 .paddingright22 {
@@ -154,10 +163,86 @@ button {
     color: #333;
 }
 
-.float-right img {
+.round {
     border-radius: 50%;
+}
+
+.float-right img {
     position: relative;
     top: 17px;
-    left: 4px;
+    left: -2px;
     cursor: pointer;
+}
+
+
+/*
+  ========================================
+  Article
+  ========================================
+*/
+
+article {
+    position: relative;
+    top: 65px;
+    height: 602px;
+    width: 100%;
+}
+
+
+/*Blogger info*/
+
+header {
+    box-sizing: border-box;
+    padding: 35px 20px 5px 20px;
+    width: 740px;
+    height: 103px;
+    margin: auto;
+}
+
+header img {
+    float: left;
+    cursor: pointer;
+}
+
+.blogger-info {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0 20px 0 15px;
+    float: right;
+    height: 61px;
+    width: 640px;
+}
+
+.blogger-info a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #444;
+    margin-right: 10px;
+}
+
+.round-green-border {
+    background: transparent;
+    color: #02b875;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 1px solid #02b875;
+    cursor: pointer;
+}
+
+.blogger-info .round-green-border {
+    position: relative;
+    top: -1px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    padding: 1.6px 9.5px;
+}
+
+.about-blogger {
+    font-size: 12.2px;
+    color: #b5b5b5;
+}
+
+.about-date {
+    display: inline-block;
+    margin-top: 4px;
 }
