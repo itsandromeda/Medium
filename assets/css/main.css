@@ -4,6 +4,7 @@ body {
 }
 
 .wrapper {
+    position: relative;
     height: 602px;
 }
 
@@ -19,7 +20,6 @@ nav {
     position: fixed;
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid #f3f3f3;
     z-index: 5;
 }
 
@@ -46,15 +46,17 @@ button {
 /*Navigation left*/
 
 .float-left {
+    position: relative;
+    left: -9px;
     float: left;
     height: 100%;
-    width: 450px;
+    width: 395px;
 }
 
 .medium-link {
     position: absolute;
     top: 19px;
-    left: 29px;
+    left: 10px;
     width: 54px;
     height: 28px;
     border-right: 1px solid #d9d9d9;
@@ -76,7 +78,7 @@ button {
     height: 37px;
     margin-top: 15px;
     margin-right: 18px;
-    margin-left: 84px;
+    margin-left: 85px;
 }
 
 #following-dd-btn {
@@ -135,6 +137,8 @@ button {
 /*Navigation right*/
 
 .float-right {
+    position: relative;
+    right: 9px;
     float: right;
     height: 100%;
     width: 138px;
@@ -184,7 +188,7 @@ button {
 article {
     position: relative;
     top: 65px;
-    height: 602px;
+    height: 477px;
     width: 100%;
 }
 
@@ -194,23 +198,23 @@ article {
 header {
     box-sizing: border-box;
     padding: 35px 20px 5px 20px;
-    width: 740px;
+    width: 757px;
     height: 103px;
     margin: auto;
 }
 
 header img {
     float: left;
+    margin-right: 15px;
     cursor: pointer;
 }
 
 .blogger-info {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
-    padding: 0 20px 0 15px;
-    float: right;
+    padding-right: 20px;
     height: 61px;
-    width: 640px;
+    width: 100%;
 }
 
 .blogger-info a {
@@ -258,7 +262,7 @@ header img {
     box-sizing: border-box;
     width: 740px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 article h1 {
@@ -273,7 +277,7 @@ article h1 {
 
 article p {
     font-family: 'Raleway', serif;
-    font-size: 19px;
+    font-size: 19.5px;
     color: #595959;
     line-height: 32px;
     width: 655px;
@@ -282,4 +286,124 @@ article p {
 
 article p:last-child {
     margin-top: 35px;
+}
+
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#footer-left {
+    font-size: 25px;
+    float: left;
+    width: 130px;
+    margin-left: 328px;
+    margin-top: 10px;
+}
+
+.fa-heart {
+    color: #02b875;
+    visibility: hidden;
+    position: absolute;
+    top: 11px;
+    left: 328px;
+}
+
+.fa-heart-o {
+    color: #02b875;
+}
+
+.show {
+    visibility: visible;
+}
+/*Reaction counter*/
+#heart-counter {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #b5b5b5;
+    position: absolute;
+    top: 13px;
+    left: 358px;
+    cursor: pointer;
+}
+
+#heart-counter span:last-child {
+    position: relative;
+    left: -7px;
+    visibility: hidden;
+}
+
+.fa-comment-o {
+    position: relative;
+    left: 2px;
+    color: #8f8f8f;
+    -webkit-transform: scale(-1, 1);
+       -moz-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);    
+         -o-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+}
+
+#footer-left .fa-comment-o:hover,
+#footer-right .fa-instagram:hover {
+    color: #333;
+}
+
+#footer-right {
+    float: right;
+    width: 270px;
+    margin-right: 186px;
+    margin-top: 10px;
+}
+
+#footer-right .fa {
+    color: #8f8f8f;
+    position: relative;
+    top: -2px;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#footer-right .fa-twitter:hover {
+    color: #1da1f2;
+}
+
+#footer-right .fa-facebook:hover {
+    color: #3b5998;
+}
+
+.next-story {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 13px;
+    text-decoration: none;
+    width: 100px;
+    height: 25px;
+    margin-left: 10px;
+    padding-left: 18px;    
+    border-left: 1px solid #e0e0e0;
+    display: inline-block;
+}
+
+.next-story a {
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+    color: #299f6c;
+    display: block;
+}
+
+.next-story span {  
+    color: #333;
+    font-size: 14px;
+}
+
+footer {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #e0e0e0;
 }

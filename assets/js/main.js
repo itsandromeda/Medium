@@ -41,8 +41,25 @@ var mainContainer = document.createElement("div"),
     articleP = document.createElement("p"),
     articleContent = document.createTextNode("Te imaginas el mundo sin tipos de letra, tamaños, colores, o sin iconos , nada, nada sería iguaaaaaal!!!! Pero gracias a muchos desarrolladores y diseñadores, hoy contamos con una inimaginable gama de fuentes para nuestro desarrollos web, pero la pregunta que nos hacemos es, ¿existen reglas, hay una mejor forma de hacerlo, no sé que tipografía usar? Tengo muchas preguntas y pocas respuestas!!"),
     articlePB = document.createElement("p"),
-    articleContentB = document.createTextNode("Vamos paso a paso…");
+    articleContentB = document.createTextNode("Vamos paso a paso…"),
+    /*footer*/
+    footer = document.createElement("footer"),
+    footerRight = document.createElement("div"),
+    rightDiv = document.createElement("div"),
+    footerLeft = document.createElement("div"),
+    HeartNumber = document.createElement("div"),
+    heartOneSpan = document.createElement("span"),
+
+    heartOne = document.createTextNode("1"),
+    heartTwoSpan = document.createElement("span"),
+    heartTwo = document.createTextNode("2"),
+    nextStoryLink = document.createElement("a"),
+    nextStory = document.createElement("a"),
+    nextStoryNode = document.createTextNode("Next story"),
+    nextStorySpan = document.createElement("span"),
+    nextStoryTitle = document.createTextNode("El abc de HTML");
 /*Navigation bar*/
+
 mainContainer.classList.add("wrapper");
 mainContainer.appendChild(nav);
 
@@ -110,7 +127,7 @@ aboutDiv.appendChild(detailsDiv);
 
 header.appendChild(headerDiv);
 articleTitle.appendChild(articleTitleNode);
-
+/*Article*/
 articleDiv.classList.add("article-wrapper");
 articleDiv.appendChild(articleTitle);
 article.appendChild(articleDiv);
@@ -120,7 +137,14 @@ articleDiv.appendChild(articleP);
 
 articlePB.appendChild(articleContentB);
 articleDiv.appendChild(articlePB);
-
+/*footer*/
+footer.appendChild(footerLeft);
+footerLeft.setAttribute("id", "footer-left");
+rightDiv.setAttribute("id", "footer-left-icon");
+footerLeft.appendChild(rightDiv);
+footer.appendChild(footerRight);
+footerRight.setAttribute("id", "footer-right");
+mainContainer.appendChild(footer);
 document.body.appendChild(mainContainer);
 
 var icons = [{
@@ -147,6 +171,30 @@ var icons = [{
     container: "nav-right",
     className: "fa-bell-o",
     link: "#"
+}, {
+    container: "footer-left-icon",
+    className: "fa-heart-o",
+    link: "#"
+}, {
+    container: "footer-left-icon",
+    className: "fa-heart",
+    link: "#"
+}, {
+    container: "footer-left-icon",
+    className: "fa-comment-o",
+    link: "#"
+}, {
+    container: "footer-right",
+    className: "fa-twitter",
+    link: "https://twitter.com/LaboratoriaLA"
+}, {
+    container: "footer-right",
+    className: "fa-instagram",
+    link: "https://www.instagram.com/laboratoria.la/"
+}, {
+    container: "footer-right",
+    className: "fa-facebook",
+    link: "https://www.facebook.com/laboratoria.la/"
 }];
 
 var container = icons.map((e) => e.container),
@@ -177,8 +225,16 @@ function iconMaker(containerId, clssName, link) {
         icon.classList.add("paddingright15");
     }
 
-    if (clssName === "fa-search" || clssName === "fa-bell-o") {
+    if (clssName === "fa-search" || clssName === "fa-bell-o" || clssName === "fa-heart-o") {
         icon.classList.add("paddingright22");
+    }
+
+    if (clssName === "fa-heart-o") {
+        icon.setAttribute("id", "heart-reaction");
+    }
+
+    if (clssName === "fa-heart") {
+        icon.setAttribute("id", "heart-post");
     }
 
     anchor.appendChild(icon);
@@ -190,3 +246,35 @@ for (i = 0; i < icons.length; i += 1) {
 }
 
 navRight.appendChild(userAvatar);
+
+document.getElementById("heart-reaction").addEventListener('click', function () {
+    document.getElementById("heart-reaction").style.visibility = "hidden";
+    document.getElementById("heart-post").style.visibility = "visible";
+    document.getElementsByClassName("heart-count")[0].style.visibility = "hidden";
+    document.getElementsByClassName("heart-count")[1].style.visibility = "visible";
+});
+
+document.getElementById("heart-post").addEventListener('click', function () {
+    document.getElementById("heart-post").style.visibility = "hidden";
+    document.getElementById("heart-reaction").style.visibility = "visible";
+    document.getElementsByClassName("heart-count")[0].style.visibility = "visible";
+    document.getElementsByClassName("heart-count")[1].style.visibility = "hidden";
+});
+
+
+nextStory.appendChild(nextStoryNode);
+nextStorySpan.appendChild(nextStoryTitle);
+nextStoryLink.setAttribute("href", "https://medium.com/laboratoria-how-to/el-abc-de-html-5115684d64e9");
+nextStoryLink.classList.add("next-story");
+nextStoryLink.appendChild(nextStory);
+nextStoryLink.appendChild(nextStorySpan);
+footerRight.appendChild(nextStoryLink);
+
+heartOneSpan.classList.add("heart-count");
+heartOneSpan.appendChild(heartOne);
+heartTwoSpan.classList.add("heart-count");
+heartTwoSpan.appendChild(heartTwo);
+HeartNumber.setAttribute("id", "heart-counter");
+HeartNumber.appendChild(heartOneSpan);
+HeartNumber.appendChild(heartTwoSpan);
+footerLeft.appendChild(HeartNumber);
